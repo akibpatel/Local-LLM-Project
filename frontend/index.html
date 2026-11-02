@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local LLM - AI Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <h2>✦ LLM Studio</h2>
+        <p class="label">YOUR AI ASSISTANT</p>
+        <div class="side-item">✧ New Conversation</div>
+        <div class="status"><span></span> Local Model Ready</div>
+        <p class="footer">Powered by Ollama</p>
+    </aside>
+
+    <main class="main">
+
+        <header>
+            <div>
+                <h3>AI Chat Assistant</h3>
+                <p>Ask anything. Get intelligent answers.</p>
+            </div>
+            <span class="online">● Online</span>
+        </header>
+
+        <section class="chat" id="chat">
+
+            <div class="welcome" id="welcome">
+                <div class="sparkle">✦</div>
+                <h1>How can I help you today?</h1>
+                <p>Ask a question to get started.</p>
+
+                <div class="suggestions">
+                    <button onclick="useSuggestion('Explain Artificial Intelligence')">
+                        Explain AI
+                    </button>
+
+                    <button onclick="useSuggestion('What is Python?')">
+                        Learn Python
+                    </button>
+
+                    <button onclick="useSuggestion('Explain cloud computing')">
+                        Cloud Computing
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="input-area">
+            <div class="input-box">
+                <textarea id="question"
+                    placeholder="Message your AI assistant..."
+                    rows="1"></textarea>
+
+                <button id="sendBtn" onclick="sendMessage()">➤</button>
+            </div>
+
+            <p>AI-generated responses may need verification.</p>
+        </div>
+
+    </main>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
